@@ -1,0 +1,391 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 !important;
+}
+
+
+.container {
+    flex: 1;
+}
+
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+
+footer {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+.f-info-links {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+
+.f-info-socials i {
+    margin-right: 1rem;
+}
+
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*Cards*/
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* Card Effects  */ 
+.card-img.overlay {
+    opacity: 0;
+}
+
+.card-image-overlay a:hover {
+    opacity: 0.2rem;
+    background-color: white;
+}
+
+/*New Page */
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Page */
+
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    
+}
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+footer {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    margin: 0 !important;
+}
+
+
+#map { 
+    height: 400px;
+    width: 80vh; 
+}
+
+
+/* ============================= */
+/* CATEGORY FILTERS */
+/* ============================= */
+
+#filters {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+}
+
+#filters .filters {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0.5 !important;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    cursor: pointer;
+    color: #222;
+    flex: 0 0 auto;
+}
+
+#filters .filters:hover {
+    opacity: 1 !important;
+}
+
+#filters .filters p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.tax-info {
+    display: none;
+}
+
+#filters .tax-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-left: auto;
+    margin-top: 2rem;
+    flex: 0 0 auto;
+}
+
+
+#filters .filter-button {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    flex: 0 0 auto;
+}
+
+/* Advanced filter panel */
+
+.filter-panel {
+    display: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.filter-panel.show {
+    display: block;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.apply-filter-btn {
+    background-color: #fe424d;
+    color: white;
+    border: none;
+}
+
+.apply-filter-btn:hover {
+    background-color: #fe424d;
+    color: white;
+}
+
+.listing-card-container {
+    position: relative;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    border: none;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+}
+
+.wishlist-btn.active {
+    color: #fe424d;
+}
+
+
+
+/* Navbar spacing */
+.navbar .nav-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbar .nav-link {
+    white-space: nowrap;
+}
+
+
+/* ================================= */
+/* TRAVEL ASSISTANT PAGE */
+/* ================================= */
+
+.travel-assistant-card {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* Main heading */
+.travel-assistant-card h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+/* Description text */
+.travel-assistant-card > p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* Natural language section */
+.travel-assistant-card .mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.travel-assistant-card textarea {
+    border: 1px solid #d9dde3;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    font-size: 1rem;
+    min-height: 135px;
+    resize: vertical;
+}
+
+.travel-assistant-card textarea:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.15rem rgba(254, 66, 77, 0.1);
+}
+
+/* OR text */
+.travel-assistant-card .text-center {
+    text-align: left !important;
+}
+
+.travel-assistant-card .text-muted {
+    color: #6b7280 !important;
+}
+
+/* Form labels */
+.travel-assistant-card .form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 0.6rem;
+}
+
+/* Inputs and selects */
+.travel-assistant-card .form-control,
+.travel-assistant-card .form-select {
+    min-height: 48px;
+    border: 1px solid #d9dde3;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    padding: 0.7rem 0.9rem;
+}
+
+.travel-assistant-card .form-control:focus,
+.travel-assistant-card .form-select:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.15rem rgba(254, 66, 77, 0.1);
+}
+
+/* Spacing between fields */
+.travel-assistant-card .mb-3 {
+    margin-bottom: 1.4rem !important;
+}
+
+/* Find button */
+.travel-assistant-card button[type="submit"] {
+    background-color: #fe424d !important;
+    border: none !important;
+    border-radius: 0.6rem;
+    min-height: 48px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.travel-assistant-card button[type="submit"]:hover {
+    background-color: #e63946 !important;
+}

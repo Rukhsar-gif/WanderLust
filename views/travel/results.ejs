@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">✨ Recommended Stays</h2>
+
+    <% if (recommendations.length === 0) { %>
+
+        <div class="text-center mt-5">
+            <h4>No matching stays found</h4>
+
+            <p class="text-muted">
+                Try changing your budget, destination, or preferences.
+            </p>
+
+            <a href="/travel" class="btn btn-danger">
+                Try Again
+            </a>
+        </div>
+
+    <% } else { %>
+
+        <p class="text-muted mb-4">
+            We found <strong><%= recommendations.length %></strong>
+            stay(s) matching your preferences.
+        </p>
+
+        <div class="row">
+
+            <% recommendations.forEach(listing => { %>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img
+                            src="<%= listing.image.url %>"
+                            class="card-img-top"
+                            style="height: 220px; object-fit: cover;"
+                            alt="<%= listing.title %>"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                <%= listing.title %>
+                            </h5>
+
+                            <p class="text-muted">
+                                <%= listing.location %>,
+                                <%= listing.country %>
+                            </p>
+
+                            <p>
+                                <strong>
+                                    ₹<%= listing.price.toLocaleString("en-IN") %>
+                                </strong>
+                                / night
+                            </p>
+
+                            <p class="small">
+                                <%= listing.propertyType %>
+                                ·
+                                <%= listing.guests %> guests
+                                ·
+                                <%= listing.bedrooms %> bedrooms
+                            </p>
+
+                            <a
+                                href="/listings/<%= listing._id %>"
+                                class="btn btn-dark"
+                            >
+                                View Stay
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <% }) %>
+
+        </div>
+
+    <% } %>
+
+</div>

@@ -1,0 +1,164 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br><br>
+    <h3> Create a New Listing</h3>
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" placeholder="enter title" class="form-control" required>
+
+            <div class="valid-feedback">Title Looks good!</div>
+            <div class="invalid-feedback">Title is important!!</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div> 
+        
+        <div class="mb-3">
+            <label for="image" class="form-label">Uplode image</label>
+            <input name="listing[image]"  type="file" class="form-control" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" placeholder="enter price"  class="form-control" required>
+
+            <div class="invalid-feedback">Price should be valid</div>
+        
+        </div>
+        
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" placeholder="enter location" type="text" class="form-control" required>
+
+            <div class="invalid-feedback">Please enter location</div>
+        
+        </div>
+        
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required>
+
+            <div class="invalid-feedback">Please enter country name!!</div>
+        </div>
+
+        <div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+
+    <select name="listing[category]" class="form-select" required>
+        <option value="">Select category</option>
+        <option value="Trending">Trending</option>
+        <option value="Rooms">Rooms</option>
+        <option value="Iconic Cities">Iconic Cities</option>
+        <option value="Mountains">Mountains</option>
+        <option value="Castles">Castles</option>
+        <option value="Amazing Pools">Amazing Pools</option>
+        <option value="Camping">Camping</option>
+        <option value="Farms">Farms</option>
+        <option value="Arctic">Arctic</option>
+    </select>
+
+    <div class="invalid-feedback">
+        Please select a category.
+    </div>
+</div>
+
+
+<div class="mb-3">
+    <label for="propertyType" class="form-label">Property Type</label>
+
+    <select name="listing[propertyType]" class="form-select" required>
+        <option value="">Select property type</option>
+        <option value="House">House</option>
+        <option value="Apartment">Apartment</option>
+        <option value="Villa">Villa</option>
+        <option value="Cabin">Cabin</option>
+        <option value="Hotel">Hotel</option>
+        <option value="Farm">Farm</option>
+        <option value="Cottage">Cottage</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-3 mb-3">
+        <label class="form-label">Guests</label>
+        <input
+            type="number"
+            name="listing[guests]"
+            class="form-control"
+            min="1"
+            value="2"
+            required
+        >
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <label class="form-label">Bedrooms</label>
+        <input
+            type="number"
+            name="listing[bedrooms]"
+            class="form-control"
+            min="1"
+            value="1"
+            required
+        >
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <label class="form-label">Beds</label>
+        <input
+            type="number"
+            name="listing[beds]"
+            class="form-control"
+            min="1"
+            value="1"
+            required
+        >
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <label class="form-label">Bathrooms</label>
+        <input
+            type="number"
+            name="listing[bathrooms]"
+            class="form-control"
+            min="1"
+            value="1"
+            required
+        >
+    </div>
+
+</div>
+
+
+<div class="mb-3">
+    <label class="form-label">Amenities</label>
+
+    <input
+        type="text"
+        name="listing[amenities]"
+        class="form-control"
+        placeholder="WiFi, Parking, Pool, Kitchen"
+    >
+
+    <small class="text-muted">
+        Separate amenities with commas.
+    </small>
+</div>
+        <br> 
+        <button class="btn btn-dark add-btn">Add</button>
+        <br><br>
+    </form>
+    </div>
+    </div>
+</body>
